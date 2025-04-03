@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Payment - TicketXpress</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200">
+  <link rel="stylesheet" href="css/payment.css">
+  <link rel="icon" href="images/train-logo.png">
+</head>
+<body>
+  <header class="payment-header">
+    <a href="confirm-train.html" class="back-btn">
+      <span class="material-symbols-outlined">arrow_back</span> Back to Confirm
+    </a>
+    <h1>Payment</h1>
+  </header>
+
+  <main class="payment-main">
+    <div class="payment-container">
+      <section class="booking-summary">
+        <h2>Booking Summary</h2>
+        <div class="summary-card">
+          <div class="train-info">
+            <div class="train-name">Mumbai Central-Gandhinagar Express</div>
+            <div class="train-number">TX001</div>
+          </div>
+          
+          <div class="train-image">
+            <img src="images/train.jpg" alt="Train Image" width="80" height="80">
+          </div>
+          
+          <div class="journey-details">
+            <div class="station">
+              <div class="time">06:00</div>
+              <div class="name">Mumbai Central</div>
+              <div class="date">01 Apr 2025</div>
+            </div>
+            
+            <div class="duration">
+              <div class="route-line"></div>
+              <div class="time">5h 40m</div>
+            </div>
+            
+            <div class="station">
+              <div class="time">11:40</div>
+              <div class="name">Gandhinagar</div>
+              <div class="date">01 Apr 2025</div>
+            </div>
+          </div>
+          
+          <div class="passenger-info">
+            <div class="passenger-count">2 Passengers (1 Adult, 1 Child)</div>
+            <div class="add-ons">
+              <img src="images/thali.png" alt="Meal" width="20" height="20">
+              Meal Included (1 Passenger)
+            </div>
+          </div>
+        </div>
+        
+        <div class="kyc-details">
+          <h3>KYC Verification Details</h3>
+          <div class="kyc-row">
+            <span>Document Type:</span>
+            <span>Birth Certificate</span>
+          </div>
+          <div class="kyc-row">
+            <span>Document Number:</span>
+            <span>BC123456789</span>
+          </div>
+        </div>
+        
+        <div class="price-summary">
+          <div class="price-row">
+            <span>Base Fare (2 Passengers)</span>
+            <span>₹2,400</span>
+          </div>
+          <div class="price-row">
+            <span>Discount (1 Child - 15%)</span>
+            <span>- ₹180</span>
+          </div>
+          <div class="price-row">
+            <span>Meal (1 Passenger)</span>
+            <span>₹150</span>
+          </div>
+          <div class="price-row total">
+            <span>Total Amount</span>
+            <span>₹2,370</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="payment-methods">
+        <h2>Payment Method</h2>
+        <div class="payment-options">
+          <div class="payment-option active">
+            <div class="payment-icon">
+              <img src="images/1card.png" alt="Card" width="40" height="40">
+            </div>
+            <div class="payment-name">Credit/Debit Card</div>
+          </div>
+          
+          <div class="payment-option">
+            <div class="payment-icon">
+              <img src="images/netbanking.png" alt="Net Banking" width="40" height="40">
+            </div>
+            <div class="payment-name">Net Banking</div>
+          </div>
+          
+          <div class="payment-option">
+            <div class="payment-icon">
+              <img src="images/upi.svg" alt="UPI" width="40" height="40">
+            </div>
+            <div class="payment-name">UPI</div>
+          </div>
+          
+          <div class="payment-option">
+            <div class="payment-icon">
+              <img src="images/wallet.png" alt="Wallet" width="40" height="40">
+            </div>
+            <div class="payment-name">Wallet</div>
+          </div>
+        </div>
+        
+        <div class="card-details">
+          <div class="form-group">
+            <label for="cardNumber">Card Number</label>
+            <div class="input-with-icon">
+              <img src="images/card.png" alt="Card" width="20" height="20">
+              <input type="text" id="cardNumber" class="form-control" placeholder="1234 5678 9012 3456" required>
+            </div>
+          </div>
+          
+          <div class="form-group">
+            <label for="cardName">Name on Card</label>
+            <div class="input-with-icon">
+              <img src="images/user.png" alt="User" width="20" height="20">
+              <input type="text" id="cardName" class="form-control" placeholder="Aniket" required>
+            </div>
+          </div>
+          
+          <div class="form-row">
+            <div class="form-group">
+              <label for="cardExpiry">Expiry Date</label>
+              <div class="input-with-icon">
+                <img src="images/calendar.png" alt="Calendar" width="20" height="20">
+                <input type="text" id="cardExpiry" class="form-control" placeholder="MM/YY" required>
+              </div>
+            </div>
+            
+            <div class="form-group">
+              <label for="cardCvv">CVV</label>
+              <div class="input-with-icon">
+                <img src="images/lock.png" alt="Lock" width="20" height="20">
+                <input type="text" id="cardCvv" class="form-control" placeholder="123" required>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="payment-action">
+        <button type="submit" class="pay-now-btn">
+          <img src="images/payment-icon.png" alt="Payment" width="24" height="24">
+          Pay ₹2,370 Now
+        </button>
+        <p class="secure-payment">
+          <img src="images/secure-icon.png" alt="Secure" width="20" height="20">
+          Your payment is secured with 256-bit encryption
+        </p>
+      </section>
+    </div>
+  </main>
+</body>
+</html>
