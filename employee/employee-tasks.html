@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Today's Tasks - TicketXpress</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200">
+    <link rel="stylesheet" href="../style.css"> <!-- For sidebar styling -->
+    <link rel="stylesheet" href="../css/admin.employee.css"> <!-- Main content styling -->
+    <link rel="icon" href="../images/train-logo.png">
+</head>
+<body>
+    <aside class="sidebar">
+        <div class="sidebar-header">
+            <img src="../images/train-logo.png" alt="TicketXpress Logo">
+            <h2>TicketXpress</h2>
+        </div>
+        
+        <ul class="sidebar-links">
+            <li><a href="employee-dashboard.html"><span class="material-symbols-outlined">dashboard</span>Dashboard</a></li>
+            <li><a href="employee-schedule.html"><span class="material-symbols-outlined">calendar_month</span>My Schedule</a></li>
+            <li><a href="employee-tasks.html" class="active"><span class="material-symbols-outlined">task</span>Today's Tasks</a></li>
+            <li><a href="Announcement.html"><span class="material-symbols-outlined">notifications_active</span>Notifications</a></li>
+            <li><a href="employee-help.html"><span class="material-symbols-outlined">help</span>Help Center</a></li>
+            
+            <h4><span>Account</span><div class="menu-separator"></div></h4>
+            <li><a href="employee-profile.html"><span class="material-symbols-outlined">account_circle</span>Profile</a></li>
+            <li><a href="../login.html"><span class="material-symbols-outlined">logout</span>Logout</a></li>
+        </ul>
+        
+        <div class="user-account">
+            <div class="user-profile">
+                <img src="../images/user.png" alt="Employee Profile">
+                <div class="user-detail">
+                    <h3>Aniket Madavi</h3>
+                    <span>Main Driver</span>
+                </div>
+            </div>
+        </div>
+    </aside>
+
+    <main class="content">
+        <section class="employee-section">
+            <h1 class="employee-title">Today's Tasks</h1>
+
+            <div class="employee-container">
+                <!-- Task Overview -->
+                <div class="employee-add">
+                    <h2>Task Overview (April 02, 2025)</h2>
+                    <div style="display: flex; gap: 20px; flex-wrap: wrap;">
+                        <div style="flex: 1; min-width: 200px; padding: 15px; background: #f8f9ff; border-radius: 5px;">
+                            <h3>Total Tasks</h3>
+                            <p style="font-size: 1.5rem; color: #4f52ba;">4</p>
+                        </div>
+                        <div style="flex: 1; min-width: 200px; padding: 15px; background: #f8f9ff; border-radius: 5px;">
+                            <h3>Completed</h3>
+                            <p style="font-size: 1.5rem; color: #4f52ba;">0</p>
+                        </div>
+                        <div style="flex: 1; min-width: 200px; padding: 15px; background: #f8f9ff; border-radius: 5px;">
+                            <h3>Pending</h3>
+                            <p style="font-size: 1.5rem; color: #4f52ba;">4</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Task List -->
+                <div class="employee-list">
+                    <h2>Task List</h2>
+                    <div class="table-container">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Time</th>
+                                    <th>Task</th>
+                                    <th>Details</th>
+                                    <th>Location</th>
+                                    <th>Status</th>
+                                    <th>Action</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>07:30 - 08:00</td>
+                                    <td>Pre-Trip Inspection</td>
+                                    <td>Check engine, brakes, and fuel levels for Train WX9012</td>
+                                    <td>Mumbai Central Depot</td>
+                                    <td class="status-active">Pending</td>
+                                    <td>
+                                        <button class="action-btn approve">Mark Complete</button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>08:00 - 16:00</td>
+                                    <td>Drive Train</td>
+                                    <td>Mumbai Central - Pune, Train No: WX9012, Coach: A2</td>
+                                    <td>Mumbai Central Station</td>
+                                    <td class="status-active">Pending</td>
+                                    <td>
+                                        <button class="action-btn approve">Mark Complete</button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>16:00 - 16:30</td>
+                                    <td>Post-Trip Report</td>
+                                    <td>Submit mileage and condition report for WX9012</td>
+                                    <td>Mumbai Central Depot</td>
+                                    <td class="status-active">Pending</td>
+                                    <td>
+                                        <button class="action-btn approve">Mark Complete</button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>17:00 - 18:00</td>
+                                    <td>Safety Briefing</td>
+                                    <td>Attend briefing with Priya Patel</td>
+                                    <td>Mumbai Central Depot</td>
+                                    <td class="status-active">Pending</td>
+                                    <td>
+                                        <button class="action-btn approve">Mark Complete</button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- Task Notes -->
+                <div class="employee-activity">
+                    <h2>Task Notes</h2>
+                    <div class="form-group">
+                        <label for="task-notes">Add Notes for Today's Tasks</label>
+                        <textarea id="task-notes" class="form-control" rows="4" placeholder="Enter any additional notes or observations..."></textarea>
+                    </div>
+                    <button class="add-btn" style="margin-top: 15px;">Save Notes</button>
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+</html>

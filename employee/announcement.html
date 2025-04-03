@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notifications - TicketXpress</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../style.css"> <!-- For sidebar styling -->
+    <link rel="stylesheet" href="../css/admin.employee.css"> <!-- Main content styling -->
+    <link rel="icon" href="../images/train-logo.png">
+</head>
+<body>
+    <aside class="sidebar">
+        <div class="sidebar-header">
+            <img src="../images/train-logo.png" alt="TicketXpress Logo">
+            <h2>TicketXpress</h2>
+        </div>
+        
+        <ul class="sidebar-links">
+            <li><a href="employee-dashboard.html"><span class="material-symbols-outlined">dashboard</span>Dashboard</a></li>
+            <li><a href="employee-schedule.html"><span class="material-symbols-outlined">calendar_month</span>My Schedule</a></li>
+            <li><a href="employee-tasks.html"><span class="material-symbols-outlined">task</span>Today's Tasks</a></li>
+            <li><a href="Announcement.html" class="active"><span class="material-symbols-outlined">notifications_active</span>Notifications</a></li>
+            <li><a href="employee-help.html"><span class="material-symbols-outlined">help</span>Help Center</a></li>
+            
+            <h4><span>Account</span><div class="menu-separator"></div></h4>
+            <li><a href="employee-profile.html"><span class="material-symbols-outlined">account_circle</span>Profile</a></li>
+            <li><a href="../login.html"><span class="material-symbols-outlined">logout</span>Logout</a></li>
+        </ul>
+        
+        <div class="user-account">
+            <div class="user-profile">
+                <img src="../images/user.png" alt="Employee Profile">
+                <div class="user-detail">
+                    <h3>Aniket Madavi</h3>
+                    <span>Main Driver</span>
+                </div>
+            </div>
+        </div>
+    </aside>
+
+    <main class="content">
+        <section class="employee-section">
+            <h1 class="employee-title">Notifications</h1>
+            
+            <div class="employee-container">
+                <div class="employee-list">
+                    <div class="table-container">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Date</th>
+                                    <th>Title</th>
+                                    <th>Details</th>
+                                    <th>Action</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>01 Apr 2025</td>
+                                    <td>Schedule Update: Mumbai - Pune</td>
+                                    <td>Your shift for Mumbai - Pune (WX9012) on 02 Apr 2025 has been confirmed. Departure at 08:00.</td>
+                                    <td>
+                                        <a href="employee-schedule.html"><button class="action-btn approve">View Schedule</button></a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>31 Mar 2025</td>
+                                    <td>Safety Briefing Reminder</td>
+                                    <td>Reminder: Attend the safety briefing with Priya Patel on 02 Apr 2025 at 17:00, Mumbai Central Depot.</td>
+                                    <td>
+                                        <a href="employee-tasks.html"><button class="action-btn approve">View Tasks</button></a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>30 Mar 2025</td>
+                                    <td>New Shift Assigned</td>
+                                    <td>You’ve been assigned a new shift: Mumbai - Goa (WX5678) on 08 Apr 2025, 15:45 - 23:30.</td>
+                                    <td>
+                                        <a href="employee-schedule.html"><button class="action-btn approve">View Schedule</button></a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>28 Mar 2025</td>
+                                    <td>Maintenance Alert</td>
+                                    <td>Track maintenance scheduled on 10 Apr 2025 may affect your Mumbai - Gandhinagar shift. Stay updated.</td>
+                                    <td>
+                                        <a href="employee-schedule.html"><button class="action-btn approve">View Schedule</button></a>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+  
+</body>
+</html>

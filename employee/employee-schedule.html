@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Schedule - TicketXpress</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200">
+    <link rel="stylesheet" href="../style.css"> <!-- For sidebar styling -->
+    <link rel="stylesheet" href="../css/admin.employee.css"> <!-- Main content styling -->
+</head>
+<body>
+   
+    <aside class="sidebar">
+        <div class="sidebar-header">
+            <img src="../images/train-logo.png" alt="TicketXpress Logo">
+            <h2>TicketXpress</h2>
+        </div>
+        
+        <ul class="sidebar-links">
+            <li><a href="employee-dashboard.html"><span class="material-symbols-outlined">dashboard</span>Dashboard</a></li>
+            <li><a href="employee-schedule.html" class="active"><span class="material-symbols-outlined">calendar_month</span>My Schedule</a></li>
+            <li><a href="employee-tasks.html"><span class="material-symbols-outlined">task</span>Today's Tasks</a></li>
+            <li><a href="Announcement.html"><span class="material-symbols-outlined">notifications_active</span>Notifications</a></li>
+
+            <li><a href="employee-help.html"><span class="material-symbols-outlined">help</span>Help Center</a></li>
+            
+            <h4><span>Account</span><div class="menu-separator"></div></h4>
+            <li><a href="employee-profile.html"><span class="material-symbols-outlined">account_circle</span>Profile</a></li>
+            <li><a href="../login.html"><span class="material-symbols-outlined">logout</span>Logout</a></li>
+        </ul>
+        <div class="user-account">
+            <div class="user-profile">
+                <img src="../images/user.png" alt="Admin Profile">
+                <div class="user-detail">
+                    <h3>Aniket Madavi</h3>
+                    <span>Main Driver</span>
+                </div>
+            </div>
+        </div>
+    </aside>
+
+    <main class="content">
+        <section class="employee-section">
+            <h1 class="employee-title">My Schedule</h1>
+
+            <div class="employee-container">
+                <!-- Month Selector and View Options -->
+                <div class="employee-add">
+                    <div style="display: flex; justify-content: space-between; align-items: center;">
+                        <div style="display: flex; align-items: center; gap: 10px;">
+                            <a href="#" class="action-btn"><span class="material-symbols-outlined">chevron_left</span></a>
+                            <h2>April 2025</h2>
+                            <a href="#" class="action-btn"><span class="material-symbols-outlined">chevron_right</span></a>
+                        </div>
+                        <div style="display: flex; gap: 10px;">
+                            <a href="#" class="add-btn active">Week</a>
+                            <a href="#" class="add-btn">Month</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Weekly Schedule Table -->
+                <div class="employee-list">
+                    <h2>Weekly Schedule</h2>
+                    <div class="table-container">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Monday 07</th>
+                                    <th>Tuesday 08</th>
+                                    <th>Wednesday 09</th>
+                                    <th>Thursday 10</th>
+                                    <th>Friday 11</th>
+                                    <th>Saturday 12</th>
+                                    <th>Sunday 13</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <div>
+                                            <strong>06:00 - 14:00</strong><br>
+                                            Mumbai Central - Gandhinagar<br>
+                                            Train No: WX1234 | Coach: B3<br>
+                                            <span class="status-active">Main Driver</span>
+                                        </div>
+                                        <div style="margin-top: 10px;">
+                                            <strong>15:30 - 17:00</strong><br>
+                                            Safety Briefing<br>
+                                            Location: Mumbai Central Depot<br>
+                                            With: Priya Patel
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div>
+                                            <strong>15:45 - 23:30</strong><br>
+                                            Mumbai - Goa<br>
+                                            Train No: WX5678 | Coach: B1<br>
+                                            <span class="status-active">Main Driver</span>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div>
+                                            <strong>05:30 - 13:30</strong><br>
+                                            Mumbai - Gandhinagar<br>
+                                            Train No: WX1234 | Coach: B3<br>
+                                            <span class="status-active">Main Driver</span>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div>
+                                            <span class="material-symbols-outlined">beach_access</span><br>
+                                            <span class="status-blocked">Day Off</span>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div>
+                                            <strong>10:15 - 18:15</strong><br>
+                                            Mumbai - Pune<br>
+                                            Train No: WX9012 | Coach: A2<br>
+                                            <span class="status-active">Main Driver</span>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div>
+                                            <strong>14:00 - 22:00</strong><br>
+                                            Mumbai - Surat<br>
+                                            Train No: WX3456 | Coach: B4<br>
+                                            <span class="status-active">Main Driver</span>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div>
+                                            <span class="material-symbols-outlined">bedtime</span><br>
+                                            <span class="status-blocked">Day Off</span>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- Schedule Legend -->
+                <div class="employee-activity">
+                    <h2>Legend</h2>
+                    <div style="display: flex; gap: 20px;">
+                        <div>
+                            <span style="display: inline-block; width: 15px; height: 15px; background: #28a745; margin-right: 5px;"></span>
+                            Scheduled Shift
+                        </div>
+                        <div>
+                            <span style="display: inline-block; width: 15px; height: 15px; background: #dc3545; margin-right: 5px;"></span>
+                            Day Off
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+</html>
