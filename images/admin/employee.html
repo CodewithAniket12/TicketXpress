@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Management - TicketXpress</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="../css/admin.employee.css">
+    <link rel="icon" href="../images/train-logo.png">
+</head>
+<body>
+    <aside class="sidebar">
+        <div class="sidebar-header">
+            <img src="../images/train-logo.png" alt="TicketXpress Logo">
+            <h2>TicketXpress</h2>
+        </div>
+        
+     
+        <ul class="sidebar-links">
+            <h4><span>Admin Menu</span><div class="menu-separator"></div></h4>
+            <li><a href="admin.html"><span class="material-symbols-outlined">dashboard</span>Dashboard</a></li>
+            <li><a href="employee.html" class="active"><span class="material-symbols-outlined">group</span>Employees</a></li>
+            <li><a href="user.html"><span class="material-symbols-outlined">person</span>Users</a></li>
+            <li><a href="travel-agent.html"><span class="material-symbols-outlined">business</span>Travel Agents</a></li>
+            <li><a href="routes.html"><span class="material-symbols-outlined">map</span>Train Routes</a></li>
+            <li><a href="schedule.html"><span class="material-symbols-outlined">schedule</span>Train Schedule</a></li>
+            <li><a href="coaches.html" ><span class="material-symbols-outlined">train</span>Coaches</a></li>
+            <li><a href="announcement.html"><span class="material-symbols-outlined">notifications_active</span>Announcements</a></li>
+
+            <h4><span>Account</span><div class="menu-separator"></div></h4>
+            <li><a href="profile.html"><span class="material-symbols-outlined">account_circle</span>Profile</a></li>
+            <li><a href="../login.html"><span class="material-symbols-outlined">logout</span>Logout</a></li>
+        </ul>
+        
+        <div class="user-account">
+            <div class="user-profile">
+                <img src="../images/user.png" alt="Admin Profile">
+                <div class="user-detail">
+                    <h3>Aniket Madavi</h3>
+                    <span>Admin</span>
+                </div>
+            </div>
+        </div>
+    </aside>
+
+    <main class="content">
+        <section class="employee-section">
+            <h1 class="employee-title">Employee Management</h1>
+            
+            <div class="employee-container">
+                <div class="employee-add">
+                    <h2>Add New Employee</h2>
+                    <form>
+                        <div class="form-group">
+                            <label for="emp-name">Full Name</label>
+                            <input type="text" id="emp-name" class="form-control" placeholder="Enter full name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="emp-email">Email</label>
+                            <input type="email" id="emp-email" class="form-control" placeholder="Enter email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="emp-phone">Phone Number</label>
+                            <input type="tel" id="emp-phone" class="form-control" placeholder="Enter phone number" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="emp-role">Role</label>
+                            <select id="emp-role" class="form-control" required>
+                                <option value="" disabled selected>Select role</option>
+                                <option value="main-driver">Main Driver</option>
+                                <option value="co-driver">Co-Driver</option>
+                                <option value="engineer">Engineer</option>
+                                <option value="tech-support">Tech Support</option>
+                            </select>
+                        </div>
+                        <button type="submit" class="add-btn">Add Employee</button>
+                    </form>
+                </div>
+
+                <div class="employee-list">
+                    <h2>Employee List</h2>
+                    <div class="search-bar">
+                        <form class="search-form">
+                            <input type="text" id="employee-search" name="search" class="form-control" placeholder="Search by ID or Email">
+                            <button type="submit" class="search-btn">Search</button>
+                        </form>
+                    </div>
+                    <div class="table-container">
+                        <table id="employee-table">
+                            <thead>
+                                <tr>
+                                    <th>ID</th>
+                                    <th>Name</th>
+                                    <th>Role</th>
+                                    <th>Email</th>
+                                    <th>Phone</th>
+                                    <th>Status</th>
+                                    <th>Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>K0012</td>
+                                    <td>Ketan Vibhuti</td>
+                                    <td>Main Driver</td>
+                                    <td>ketan.vibhuti@ticketxpress.com</td>
+                                    <td>+91 812131415</td>
+                                    <td class="status-active">Active</td>
+                                    <td>
+                                        <button class="action-btn block">Block</button>
+                                        <button class="action-btn delete">Remove</button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>E002</td>
+                                    <td>Priya Patel</td>
+                                    <td>Co-Driver</td>
+                                    <td>priya.patel@ticketxpress.com</td>
+                                    <td>+91 9876543210</td>
+                                    <td class="status-blocked">Blocked</td>
+                                    <td>
+                                        <button class="action-btn unblock">Unblock</button>
+                                        <button class="action-btn delete">Remove</button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>E003</td>
+                                    <td>Rahul Sharma</td>
+                                    <td>Engineer</td>
+                                    <td>rahul.sharma@ticketxpress.com</td>
+                                    <td>+91 8765432109</td>
+                                    <td class="status-active">Active</td>
+                                    <td>
+                                        <button class="action-btn block">Block</button>
+                                        <button class="action-btn delete">Remove</button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>E004</td>
+                                    <td>Neha Gupta</td>
+                                    <td>Tech Support</td>
+                                    <td>neha.gupta@ticketxpress.com</td>
+                                    <td>+91 7654321098</td>
+                                    <td class="status-active">Active</td>
+                                    <td>
+                                        <button class="action-btn block">Block</button>
+                                        <button class="action-btn delete">Remove</button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <div class="employee-schedule">
+                    <h2>Employee Schedule</h2>
+                    <div class="table-container">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Employee ID</th>
+                                    <th>Name</th>
+                                    <th>Date</th>
+                                    <th>Time</th>
+                                    <th>Route</th>
+                                    <th>Role</th>
+                                    <th>Details</th>
+                                    <th>Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>K0012</td>
+                                    <td>Ketan Vibhuti</td>
+                                    <td>07 Apr 2025</td>
+                                    <td>06:00</td>
+                                    <td>Mumbai Central - Gandhinagar</td>
+                                    <td>Main Driver</td>
+                                    <td>Coach: WX1234, Mileage: 4800 km</td>
+                                    <td>
+                                        <button class="action-btn edit">Edit</button>
+                                        <button class="action-btn delete">Remove</button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>E002</td>
+                                    <td>Priya Patel</td>
+                                    <td>07 Apr 2025</td>
+                                    <td>06:00</td>
+                                    <td>Mumbai Central - Gandhinagar</td>
+                                    <td>Co-Driver</td>
+                                    <td>Coach: WX1234, Mileage: 4800 km</td>
+                                    <td>
+                                        <button class="action-btn edit">Edit</button>
+                                        <button class="action-btn delete">Remove</button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>E003</td>
+                                    <td>Rahul Sharma</td>
+                                    <td>07 Apr 2025</td>
+                                    <td>05:30</td>
+                                    <td>Mumbai Central - Gandhinagar</td>
+                                    <td>Engineer</td>
+                                    <td>Maintenance Check: Engine and Brakes</td>
+                                    <td>
+                                        <button class="action-btn edit">Edit</button>
+                                        <button class="action-btn delete">Remove</button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>E004</td>
+                                    <td>Neha Gupta</td>
+                                    <td>07 Apr 2025</td>
+                                    <td>08:00</td>
+                                    <td>New Delhi - Himachal</td>
+                                    <td>Tech Support</td>
+                                    <td>Support: Onboard Systems, Coach: WX5678</td>
+                                    <td>
+                                        <button class="action-btn edit">Edit</button>
+                                        <button class="action-btn delete">Remove</button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>K0012</td>
+                                    <td>Ketan Vibhuti</td>
+                                    <td>08 Apr 2025</td>
+                                    <td>15:45</td>
+                                    <td>Mumbai - Goa</td>
+                                    <td>Main Driver</td>
+                                    <td>Coach: WX5678, Mileage: 5400 km</td>
+                                    <td>
+                                        <button class="action-btn edit">Edit</button>
+                                        <button class="action-btn delete">Remove</button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <div class="employee-activity">
+                    <h2>Employee Activity Logs</h2>
+                    <div class="table-container">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Log ID</th>
+                                    <th>Employee</th>
+                                    <th>Action</th>
+                                    <th>Date</th>
+                                    <th>Details</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>L001</td>
+                                    <td>Ketan Vibhuti</td>
+                                    <td>Updated Schedule</td>
+                                    <td>31 Mar 2025, 10:30 AM</td>
+                                    <td>Changed departure time for Mumbai - Goa to 15:45</td>
+                                </tr>
+                                <tr>
+                                    <td>L002</td>
+                                    <td>Priya Patel</td>
+                                    <td>Blocked</td>
+                                    <td>30 Mar 2025, 02:15 PM</td>
+                                    <td>Blocked by Admin</td>
+                                </tr>
+                                <tr>
+                                    <td>L003</td>
+                                    <td>Rahul Sharma</td>
+                                    <td>Added</td>
+                                    <td>01 Apr 2025, 09:00 AM</td>
+                                    <td>Added as Engineer</td>
+                                </tr>
+                                <tr>
+                                    <td>L004</td>
+                                    <td>Neha Gupta</td>
+                                    <td>Added</td>
+                                    <td>01 Apr 2025, 09:15 AM</td>
+                                    <td>Added as Tech Support</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+</html>

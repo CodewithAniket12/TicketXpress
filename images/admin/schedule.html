@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Train Schedule Management - TicketXpress</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="../css/admin.employee.css">
+    <link rel="icon" href="../images/train-logo.png">
+</head>
+<body>
+    <aside class="sidebar">
+        <div class="sidebar-header">
+            <img src="../images/train-logo.png" alt="TicketXpress Logo">
+            <h2>TicketXpress</h2>
+        </div>
+        
+        
+        <ul class="sidebar-links">
+            <h4><span>Admin Menu</span><div class="menu-separator"></div></h4>
+            <li><a href="admin.html"><span class="material-symbols-outlined">dashboard</span>Dashboard</a></li>
+            <li><a href="employee.html"><span class="material-symbols-outlined">group</span>Employees</a></li>
+            <li><a href="user.html"><span class="material-symbols-outlined">person</span>Users</a></li>
+            <li><a href="travel-agent.html"><span class="material-symbols-outlined">business</span>Travel Agents</a></li>
+            <li><a href="routes.html"><span class="material-symbols-outlined">map</span>Train Routes</a></li>
+            <li><a href="schedule.html" class="active"><span class="material-symbols-outlined">schedule</span>Train Schedule</a></li>
+            <li><a href="coaches.html" ><span class="material-symbols-outlined">train</span>Coaches</a></li>
+            <li><a href="announcement.html"><span class="material-symbols-outlined">notifications_active</span>Announcements</a></li>
+
+            <h4><span>Account</span><div class="menu-separator"></div></h4>
+            <li><a href="profile.html"><span class="material-symbols-outlined">account_circle</span>Profile</a></li>
+            <li><a href="../login.html"><span class="material-symbols-outlined">logout</span>Logout</a></li>
+        </ul>
+        <div class="user-account">
+            <div class="user-profile">
+                <img src="../images/user.png" alt="Admin Profile">
+                <div class="user-detail">
+                    <h3>Aniket Madavi</h3>
+                    <span>Admin</span>
+                </div>
+            </div>
+        </div>
+    </aside>
+
+    <main class="content">
+        <section class="employee-section">
+            <h1 class="employee-title">Train Schedule Management</h1>
+            
+            <div class="employee-container">
+                <div class="employee-add">
+                    <h2>Add New Schedule</h2>
+                    <form>
+                        <div class="form-group">
+                            <label for="train-number">Train Number</label>
+                            <input type="text" id="train-number" name="train-number" class="form-control" placeholder="e.g., TX001" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="train-name">Train Name</label>
+                            <input type="text" id="train-name" name="train-name" class="form-control" placeholder="e.g., Mumbai - Goa Express" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="route">Route</label>
+                            <select id="route" name="route" class="form-control" required>
+                                <option value="" disabled selected>Select Route</option>
+                                <option value="Mumbai - Goa">Mumbai - Goa</option>
+                                <option value="Lonavala - Ajmer">Lonavala - Ajmer</option>
+                                <option value="Mumbai Central - Gandhinagar">Mumbai Central - Gandhinagar</option>
+                                <option value="New Delhi - Himachal">New Delhi - Himachal</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="operating-days">Operating Days</label>
+                            <select id="operating-days" name="operating-days" class="form-control" multiple required>
+                                <option value="Monday">Monday</option>
+                                <option value="Tuesday">Tuesday</option>
+                                <option value="Wednesday">Wednesday</option>
+                                <option value="Thursday">Thursday</option>
+                                <option value="Friday">Friday</option>
+                                <option value="Saturday">Saturday</option>
+                                <option value="Sunday">Sunday</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="main-driver">Main Driver</label>
+                            <select id="main-driver" name="main-driver" class="form-control" required>
+                                <option value="" disabled selected>Select Main Driver</option>
+                                <option value="Ketan Vibhuti">Ketan Vibhuti (E001)</option>
+                                <option value="Rahul Sharma">Rahul Sharma (E002)</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="co-driver">Co-Driver</label>
+                            <select id="co-driver" name="co-driver" class="form-control" required>
+                                <option value="" disabled selected>Select Co-Driver</option>
+                                <option value="Priya Patel">Priya Patel (E003)</option>
+                                <option value="Vikram Singh">Vikram Singh (E004)</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="mileage">Total Mileage (km)</label>
+                            <input type="number" id="mileage" name="mileage" class="form-control" placeholder="e.g., 4500" required>
+                        </div>
+
+                        <!-- Intermediate Stations Section -->
+                        <div class="form-group">
+                            <label>Station Schedule (Start to End)</label>
+                            <div class="station-entry">
+                                <h4>Starting Station</h4>
+                                <input type="text" name="station-name-1" class="form-control" placeholder="Station Name (e.g., Mumbai)" required>
+                                <input type="time" name="station-departure-1" class="form-control" placeholder="Departure Time" required>
+                                <input type="number" name="station-distance-1" class="form-control" placeholder="Distance from Start (0 km)" value="0" readonly>
+                            </div>
+                            <div class="station-entry">
+                                <h4>Intermediate Station 1</h4>
+                                <input type="text" name="station-name-2" class="form-control" placeholder="Station Name (e.g., Panvel)">
+                                <input type="time" name="station-arrival-2" class="form-control" placeholder="Arrival Time">
+                                <input type="time" name="station-departure-2" class="form-control" placeholder="Departure Time">
+                                <input type="number" name="station-distance-2" class="form-control" placeholder="Distance from Start (km)">
+                            </div>
+                            <div class="station-entry">
+                                <h4>Intermediate Station 2</h4>
+                                <input type="text" name="station-name-3" class="form-control" placeholder="Station Name (e.g., Ratnagiri)">
+                                <input type="time" name="station-arrival-3" class="form-control" placeholder="Arrival Time">
+                                <input type="time" name="station-departure-3" class="form-control" placeholder="Departure Time">
+                                <input type="number" name="station-distance-3" class="form-control" placeholder="Distance from Start (km)">
+                            </div>
+                            <div class="station-entry">
+                                <h4>Ending Station</h4>
+                                <input type="text" name="station-name-4" class="form-control" placeholder="Station Name (e.g., Goa)" required>
+                                <input type="time" name="station-arrival-4" class="form-control" placeholder="Arrival Time" required>
+                                <input type="number" name="station-distance-4" class="form-control" placeholder="Total Distance (km)" required>
+                            </div>
+                        </div>
+
+                        <button type="submit" class="add-btn">Add Schedule</button>
+                    </form>
+                </div>
+
+                <div class="employee-list">
+                    <h2>Train Schedules List</h2>
+                    <div class="search-bar">
+                        <form class="search-form">
+                            <input type="text" id="schedule-search" name="search" class="form-control" placeholder="Search by Train Number or Route">
+                            <button type="submit" class="search-btn">Search</button>
+                        </form>
+                    </div>
+                    <div class="table-container">
+                        <table id="schedule-table">
+                            <thead>
+                                <tr>
+                                    <th>Train No</th>
+                                    <th>Train Name</th>
+                                    <th>Route</th>
+                                    <th>Station Schedule</th>
+                                    <th>Operating Days</th>
+                                    <th>Main Driver</th>
+                                    <th>Co-Driver</th>
+                                    <th>Mileage (km)</th>
+                                    <th>Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>TX001</td>
+                                    <td>Mumbai Central - Gandhinagar Express</td>
+                                    <td>Mumbai Central - Gandhinagar</td>
+                                    <td>
+                                        <table class="inner-table">
+                                            <thead>
+                                                <tr>
+                                                    <th>Station</th>
+                                                    <th>Arrival</th>
+                                                    <th>Departure</th>
+                                                    <th>Distance</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr><td>Mumbai Central</td><td>-</td><td>06:00</td><td>0 km</td></tr>
+                                                <tr><td>Surat</td><td>08:00</td><td>08:10</td><td>263 km</td></tr>
+                                                <tr><td>Vadodara</td><td>09:30</td><td>09:40</td><td>392 km</td></tr>
+                                                <tr><td>Gandhinagar</td><td>11:40</td><td>-</td><td>548 km</td></tr>
+                                            </tbody>
+                                        </table>
+                                    </td>
+                                    <td>Mon, Tue, Wed, Fri, Sat</td>
+                                    <td>Ketan Vibhuti (E001)</td>
+                                    <td>Priya Patel (E003)</td>
+                                    <td>4800</td>
+                                    <td>
+                                        <button class="action-btn edit">Edit</button>
+                                        <button class="action-btn delete">Remove</button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>TX002</td>
+                                    <td>New Delhi - Himachal Express</td>
+                                    <td>New Delhi - Himachal</td>
+                                    <td>
+                                        <table class="inner-table">
+                                            <thead>
+                                                <tr>
+                                                    <th>Station</th>
+                                                    <th>Arrival</th>
+                                                    <th>Departure</th>
+                                                    <th>Distance</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr><td>New Delhi</td><td>-</td><td>07:30</td><td>0 km</td></tr>
+                                                <tr><td>Ambala</td><td>09:45</td><td>09:50</td><td>199 km</td></tr>
+                                                <tr><td>Chandigarh</td><td>10:30</td><td>10:35</td><td>243 km</td></tr>
+                                                <tr><td>Himachal</td><td>13:40</td><td>-</td><td>412 km</td></tr>
+                                            </tbody>
+                                        </table>
+                                    </td>
+                                    <td>Mon, Tue, Wed, Fri, Sat, Sun</td>
+                                    <td>Rahul Sharma (E002)</td>
+                                    <td>Vikram Singh (E004)</td>
+                                    <td>5200</td>
+                                    <td>
+                                        <button class="action-btn edit">Edit</button>
+                                        <button class="action-btn delete">Remove</button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>TX010</td>
+                                    <td>Mumbai - Goa Express</td>
+                                    <td>Mumbai - Goa</td>
+                                    <td>
+                                        <table class="inner-table">
+                                            <thead>
+                                                <tr>
+                                                    <th>Station</th>
+                                                    <th>Arrival</th>
+                                                    <th>Departure</th>
+                                                    <th>Distance</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr><td>Mumbai</td><td>-</td><td>15:45</td><td>0 km</td></tr>
+                                                <tr><td>Panvel</td><td>16:30</td><td>16:35</td><td>50 km</td></tr>
+                                                <tr><td>Ratnagiri</td><td>19:00</td><td>19:05</td><td>335 km</td></tr>
+                                                <tr><td>Goa</td><td>21:45</td><td>-</td><td>588 km</td></tr>
+                                            </tbody>
+                                        </table>
+                                    </td>
+                                    <td>Daily</td>
+                                    <td>Ketan Vibhuti (E001)</td>
+                                    <td>Priya Patel (E003)</td>
+                                    <td>3000</td>
+                                    <td>
+                                        <button class="action-btn edit">Edit</button>
+                                        <button class="action-btn delete">Remove</button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <div class="employee-activity">
+                    <h2>Schedule Activity Logs</h2>
+                    <div class="table-container">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Log ID</th>
+                                    <th>Train</th>
+                                    <th>Action</th>
+                                    <th>Date</th>
+                                    <th>Details</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>L001</td>
+                                    <td>TX001</td>
+                                    <td>Added</td>
+                                    <td>31 Mar 2025, 07:00 AM</td>
+                                    <td>Added schedule for Mumbai Central - Gandhinagar Express</td>
+                                </tr>
+                                <tr>
+                                    <td>L002</td>
+                                    <td>TX002</td>
+                                    <td>Updated</td>
+                                    <td>30 Mar 2025, 06:00 PM</td>
+                                    <td>Updated departure time to 07:30</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+</html>

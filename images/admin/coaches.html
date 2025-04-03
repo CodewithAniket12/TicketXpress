@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coach Management - TicketXpress</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="../css/coaches.css">
+    <link rel="icon" href="../images/train-logo.png">
+</head>
+<body>
+    <aside class="sidebar">
+        <div class="sidebar-header">
+            <img src="../images/train-logo.png" alt="TicketXpress Logo">
+            <h2>TicketXpress</h2>
+        </div>
+        
+        <ul class="sidebar-links">
+            <h4><span>Admin Menu</span><div class="menu-separator"></div></h4>
+            <li><a href="admin.html"><span class="material-symbols-outlined">dashboard</span>Dashboard</a></li>
+            <li><a href="employee.html"><span class="material-symbols-outlined">group</span>Employees</a></li>
+            <li><a href="users.html"><span class="material-symbols-outlined">person</span>Users</a></li>
+            <li><a href="travel-agent.html"><span class="material-symbols-outlined">business</span>Travel Agents</a></li>
+            <li><a href="routes.html"><span class="material-symbols-outlined">map</span>Train Routes</a></li>
+            <li><a href="schedule.html"><span class="material-symbols-outlined">schedule</span>Train Schedule</a></li>
+            <li><a href="coaches.html" class="active"><span class="material-symbols-outlined">train</span>Coaches</a></li>
+            <li><a href="announcement.html"><span class="material-symbols-outlined">notifications_active</span>Announcements</a></li>
+
+            <h4><span>Account</span><div class="menu-separator"></div></h4>
+            <li><a href="admin-profile.html"><span class="material-symbols-outlined">account_circle</span>Profile</a></li>
+            <li><a href="../login.html"><span class="material-symbols-outlined">logout</span>Logout</a></li>
+        </ul>
+        
+        <div class="user-account">
+            <div class="user-profile">
+                <img src="../images/user.png" alt="Admin Profile">
+                <div class="user-detail">
+                    <h3>Aniket Madavi</h3>
+                    <span>Admin</span>
+                </div>
+            </div>
+        </div>
+    </aside>
+
+    <main class="content">
+        <section class="coaches-section">
+            <h1 class="coaches-title">Coach Management</h1>
+            
+            <div class="coaches-container">
+                <!-- Coach List -->
+                <div class="coach-list">
+                    <h2>Coach List</h2>
+                    <div class="search-bar">
+                        <form class="search-form">
+                            <input type="text" id="coach-search" name="search" class="form-control" placeholder="Search by Coach ID">
+                            <button type="submit" class="search-btn">Search</button>
+                        </form>
+                    </div>
+                    <div class="table-container">
+                        <table id="coach-table">
+                            <thead>
+                                <tr>
+                                    <th>Coach ID</th>
+                                    <th>Train</th>
+                                    <th>Capacity</th>
+                                    <th>Status</th>
+                                    <th>Last Maintenance</th>
+                                    <th>Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>WX1234</td>
+                                    <td>Mumbai Central - Gandhinagar (TX001)</td>
+                                    <td>10</td>
+                                    <td class="status-active">Active</td>
+                                    <td>01 Apr 2025</td>
+                                    <td>
+                                        <button class="action-btn maintenance">Schedule Maintenance</button>
+                                        <button class="action-btn delete">Remove</button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>WX5678</td>
+                                    <td>Mumbai - Goa (TX010)</td>
+                                    <td>10</td>
+                                    <td class="status-maintenance">Under Maintenance</td>
+                                    <td>30 Mar 2025</td>
+                                    <td>
+                                        <button class="action-btn complete">Complete Maintenance</button>
+                                        <button class="action-btn delete">Remove</button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>WX9012</td>
+                                    <td>New Delhi - Himachal (TX002)</td>
+                                    <td>10</td>
+                                    <td class="status-active">Active</td>
+                                    <td>28 Mar 2025</td>
+                                    <td>
+                                        <button class="action-btn maintenance">Schedule Maintenance</button>
+                                        <button class="action-btn delete">Remove</button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>WX3456</td>
+                                    <td>Mumbai - Goa (TX010)</td>
+                                    <td>10</td>
+                                    <td class="status-active">Active</td>
+                                    <td>29 Mar 2025</td>
+                                    <td>
+                                        <button class="action-btn maintenance">Schedule Maintenance</button>
+                                        <button class="action-btn delete">Remove</button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>WX7890</td>
+                                    <td>Mumbai Central - Gandhinagar (TX001)</td>
+                                    <td>10</td>
+                                    <td class="status-active">Active</td>
+                                    <td>27 Mar 2025</td>
+                                    <td>
+                                        <button class="action-btn maintenance">Schedule Maintenance</button>
+                                        <button class="action-btn delete">Remove</button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- Add Coach -->
+                <div class="coach-add">
+                    <h2>Add Coach to Train</h2>
+                    <form>
+                        <div class="form-group">
+                            <label for="train-id">Train</label>
+                            <select id="train-id" class="form-control" required>
+                                <option value="" disabled selected>Select train</option>
+                                <option value="TX001">Mumbai Central - Gandhinagar (TX001)</option>
+                                <option value="TX002">New Delhi - Himachal (TX002)</option>
+                                <option value="TX007">Lonavala - Ajmer (TX007)</option>
+                                <option value="TX010">Mumbai - Goa (TX010)</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="coach-id">Coach ID</label>
+                            <input type="text" id="coach-id" class="form-control" placeholder="Enter coach ID (e.g., WX1234)" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="capacity">Capacity</label>
+                            <input type="number" id="capacity" class="form-control" value="10" min="1" max="10" required>
+                        </div>
+                        <button type="submit" class="add-btn">Add Coach</button>
+                    </form>
+                </div>
+
+                <!-- Coach Maintenance Schedule -->
+                <div class="coach-maintenance">
+                    <h2>Coach Maintenance Schedule</h2>
+                    <div class="table-container">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Coach ID</th>
+                                    <th>Train</th>
+                                    <th>Maintenance Date</th>
+                                    <th>Engineer</th>
+                                    <th>Status</th>
+                                    <th>Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>WX5678</td>
+                                    <td>Mumbai - Goa (TX010)</td>
+                                    <td>02 Apr 2025</td>
+                                    <td>Rahul Sharma (E003)</td>
+                                    <td class="status-pending">Pending</td>
+                                    <td>
+                                        <button class="action-btn edit">Edit</button>
+                                        <button class="action-btn delete">Cancel</button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>WX1234</td>
+                                    <td>Mumbai Central - Gandhinagar (TX001)</td>
+                                    <td>05 Apr 2025</td>
+                                    <td>Rahul Sharma (E003)</td>
+                                    <td class="status-scheduled">Scheduled</td>
+                                    <td>
+                                        <button class="action-btn edit">Edit</button>
+                                        <button class="action-btn delete">Cancel</button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- Train Traffic and Coach Allocation -->
+                <div class="coach-allocation">
+                    <h2>Train Traffic and Coach Allocation</h2>
+                    <div class="table-container">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Train</th>
+                                    <th>Date</th>
+                                    <th>Current Coaches</th>
+                                    <th>Passenger Demand</th>
+                                    <th>Status</th>
+                                    <th>Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Mumbai - Goa (TX010)</td>
+                                    <td>07 Apr 2025</td>
+                                    <td>2 (WX5678, WX3456)</td>
+                                    <td>25 passengers</td>
+                                    <td class="status-high">High Demand</td>
+                                    <td>
+                                        <button class="action-btn add-coach">Add Coach</button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>New Delhi - Himachal (TX002)</td>
+                                    <td>07 Apr 2025</td>
+                                    <td>1 (WX9012)</td>
+                                    <td>5 passengers</td>
+                                    <td class="status-normal">Normal</td>
+                                    <td>
+                                        <button class="action-btn remove-coach">Remove Coach</button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Mumbai Central - Gandhinagar (TX001)</td>
+                                    <td>07 Apr 2025</td>
+                                    <td>2 (WX1234, WX7890)</td>
+                                    <td>15 passengers</td>
+                                    <td class="status-normal">Normal</td>
+                                    <td>
+                                        <button class="action-btn add-coach">Add Coach</button>
+                                        <button class="action-btn remove-coach">Remove Coach</button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+</html>
