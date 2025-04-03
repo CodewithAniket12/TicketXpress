@@ -1,0 +1,272 @@
+/* Coach Management Page Specific Styles */
+.coaches-section {
+    max-width: 1200px;
+    margin: 30px auto;
+    padding: 0 20px;
+}
+
+.coaches-title {
+    color: #4f52ba;
+    font-size: 2rem;
+    margin-bottom: 25px;
+    border-bottom: 3px solid #4f52ba;
+    padding-bottom: 10px;
+    width: fit-content;
+}
+
+.coaches-container {
+    background: white;
+    border-radius: 8px;
+    padding: 25px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Coach List Styles */
+.coach-list {
+    margin-bottom: 40px;
+}
+
+.coach-list h2 {
+    color: #4f52ba;
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+
+.search-bar {
+    margin-bottom: 20px;
+}
+
+.search-form {
+    display: flex;
+    gap: 15px;
+}
+
+.form-control {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+.form-control:focus {
+    border-color: #4f52ba;
+    box-shadow: 0 0 0 3px rgba(79, 82, 186, 0.2);
+    outline: none;
+}
+
+.search-btn {
+    background: #4f52ba;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.search-btn:hover {
+    background: #3a3d8a;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.table-container {
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+thead {
+    background: #4f52ba;
+    color: white;
+}
+
+th {
+    padding: 15px;
+    text-align: left;
+    font-weight: 600;
+    font-size: 1rem;
+}
+
+tbody tr {
+    border-bottom: 1px solid #eee;
+    transition: background 0.3s ease;
+}
+
+tbody tr:hover {
+    background: #f8f9ff;
+}
+
+td {
+    padding: 15px;
+    font-size: 0.95rem;
+    color: #333;
+}
+
+.status-active {
+    color: #28a745;
+    font-weight: 500;
+}
+
+.status-maintenance {
+    color: #dc3545;
+    font-weight: 500;
+}
+
+.status-pending {
+    color: #ff9800;
+    font-weight: 500;
+}
+
+.status-scheduled {
+    color: #2196f3;
+    font-weight: 500;
+}
+
+.status-high {
+    color: #dc3545;
+    font-weight: 500;
+}
+
+.status-normal {
+    color: #28a745;
+    font-weight: 500;
+}
+
+.action-btn {
+    padding: 6px 12px;
+    border: none;
+    border-radius: 5px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    cursor: pointer;
+    margin-right: 5px;
+    transition: all 0.3s ease;
+}
+
+.action-btn.maintenance, .action-btn.add-coach {
+    background: #ff9800;
+    color: white;
+}
+
+.action-btn.complete, .action-btn.remove-coach {
+    background: #28a745;
+    color: white;
+}
+
+.action-btn.edit {
+    background: #2196f3;
+    color: white;
+}
+
+.action-btn.delete {
+    background: #dc3545;
+    color: white;
+}
+
+.action-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Add Coach Styles */
+.coach-add {
+    margin-bottom: 40px;
+    padding: 20px;
+    border: 1px solid #eee;
+    border-radius: 8px;
+}
+
+.coach-add h2 {
+    color: #4f52ba;
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+
+.coach-add form {
+    display: grid;
+    gap: 15px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    color: #333;
+    font-weight: 500;
+    margin-bottom: 8px;
+}
+
+.add-btn {
+    background: #4f52ba;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    width: fit-content;
+}
+
+.add-btn:hover {
+    background: #3a3d8a;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Coach Maintenance and Allocation Styles */
+.coach-maintenance, .coach-allocation {
+    margin-bottom: 40px;
+}
+
+.coach-maintenance h2, .coach-allocation h2 {
+    color: #4f52ba;
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .coaches-section {
+        margin: 20px auto;
+    }
+
+    .coaches-title {
+        font-size: 1.5rem;
+    }
+
+    .coaches-container {
+        padding: 15px;
+    }
+
+    th, td {
+        padding: 10px;
+        font-size: 0.9rem;
+    }
+
+    .coach-add form {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 576px) {
+    th, td {
+        font-size: 0.85rem;
+    }
+
+    .action-btn {
+        padding: 5px 10px;
+        font-size: 0.8rem;
+    }
+}

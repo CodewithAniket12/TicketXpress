@@ -1,0 +1,178 @@
+.admin-section {
+    max-width: 1200px;
+    margin: 30px auto;
+    padding: 0 20px;
+}
+
+.admin-title {
+    color: #4f52ba;
+    font-size: 2rem;
+    margin-bottom: 25px;
+    border-bottom: 3px solid #4f52ba;
+    padding-bottom: 10px;
+    width: fit-content;
+}
+
+.admin-container {
+    background: white;
+    border-radius: 8px;
+    padding: 25px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.admin-overview {
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #eee;
+}
+
+.admin-overview h2 {
+    color: #4f52ba;
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+}
+
+.overview-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.overview-card {
+    background: #f8f9ff;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.overview-card h3 {
+    color: #4f52ba;
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+}
+
+.overview-card p {
+    color: #666;
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.admin-employees,
+.admin-users,
+.admin-travel-agents {
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #eee;
+}
+
+.admin-employees h2,
+.admin-users h2,
+.admin-travel-agents h2 {
+    color: #4f52ba;
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+}
+
+.table-container {
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+thead {
+    background: #4f52ba;
+    color: white;
+}
+
+th {
+    padding: 15px;
+    text-align: left;
+    font-weight: 600;
+    font-size: 1rem;
+}
+
+tbody tr {
+    border-bottom: 1px solid #eee;
+    transition: background 0.3s ease;
+}
+
+tbody tr:hover {
+    background: #f8f9ff;
+}
+
+td {
+    padding: 15px;
+    font-size: 0.95rem;
+    color: #333;
+}
+
+.action-btn {
+    padding: 8px 15px;
+    border: none;
+    border-radius: 5px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-right: 5px;
+}
+
+.action-btn.edit {
+    background: #28a745;
+    color: white;
+}
+
+.action-btn.edit:hover {
+    background: #218838;
+    transform: scale(1.05);
+}
+
+.action-btn.delete {
+    background: #dc3545;
+    color: white;
+}
+
+.action-btn.delete:hover {
+    background: #c82333;
+    transform: scale(1.05);
+}
+
+@media (max-width: 768px) {
+    .admin-section {
+        margin: 20px auto;
+    }
+
+    .admin-title {
+        font-size: 1.5rem;
+    }
+
+    .admin-container {
+        padding: 15px;
+    }
+
+    .admin-overview h2,
+    .admin-employees h2,
+    .admin-users h2,
+    .admin-travel-agents h2 {
+        font-size: 1.3rem;
+    }
+
+    th, td {
+        padding: 10px;
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 576px) {
+    th, td {
+        font-size: 0.85rem;
+    }
+
+    .action-btn {
+        padding: 6px 10px;
+        font-size: 0.8rem;
+    }
+}

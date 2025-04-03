@@ -1,0 +1,167 @@
+/* Routes Page Specific Styles */
+.routes-section {
+    max-width: 1200px;
+    margin: 30px auto;
+    padding: 0 20px;
+}
+
+.routes-title {
+    color: #4f52ba;
+    font-size: 2rem;
+    margin-bottom: 25px;
+    border-bottom: 3px solid #4f52ba;
+    padding-bottom: 10px;
+    width: fit-content;
+}
+
+.routes-container {
+    background: white;
+    border-radius: 8px;
+    padding: 25px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Introduction Styles */
+.routes-intro {
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #eee;
+}
+
+.routes-intro p {
+    color: #666;
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+/* Table Styles */
+.routes-table {
+    overflow-x: auto;
+    margin-bottom: 30px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+thead {
+    background: #4f52ba;
+    color: white;
+}
+
+th {
+    padding: 15px;
+    text-align: left;
+    font-weight: 600;
+    font-size: 1rem;
+}
+
+tbody tr {
+    border-bottom: 1px solid #eee;
+    transition: background 0.3s ease;
+}
+
+tbody tr:hover {
+    background: #f8f9ff;
+}
+
+td {
+    padding: 15px;
+    font-size: 0.95rem;
+    color: #333;
+}
+
+.inner-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 0;
+}
+
+.inner-table th, .inner-table td {
+    padding: 8px;
+    border: 1px solid #ddd;
+    text-align: left;
+    font-size: 0.9em;
+}
+
+.inner-table th {
+    background-color: #f5f5f5;
+    font-weight: 600;
+}
+
+.inner-table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+/* Additional Information Styles */
+.routes-info {
+    padding-top: 20px;
+    border-top: 1px solid #eee;
+}
+
+.routes-info p {
+    color: #666;
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.routes-info strong {
+    color: #4f52ba;
+}
+
+.routes-info ul {
+    list-style-type: disc;
+    padding-left: 20px;
+    margin-bottom: 15px;
+}
+
+.routes-info li {
+    color: #666;
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 8px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .routes-section {
+        margin: 20px auto;
+    }
+
+    .routes-title {
+        font-size: 1.5rem;
+    }
+
+    .routes-container {
+        padding: 15px;
+    }
+
+    th, td {
+        padding: 10px;
+        font-size: 0.9rem;
+    }
+
+    .inner-table th, .inner-table td {
+        font-size: 0.8em;
+        padding: 5px;
+    }
+}
+
+@media (max-width: 576px) {
+    th, td {
+        font-size: 0.85rem;
+    }
+
+    .inner-table th, .inner-table td {
+        font-size: 0.75em;
+        padding: 4px;
+    }
+
+    .routes-intro p,
+    .routes-info p,
+    .routes-info li {
+        font-size: 0.9rem;
+    }
+}

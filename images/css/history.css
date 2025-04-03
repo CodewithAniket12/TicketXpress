@@ -1,0 +1,241 @@
+/* History Page Specific Styles */
+.history-section {
+    max-width: 1200px;
+    margin: 30px auto;
+    padding: 0 20px;
+}
+
+.history-title {
+    color: #2c3e50;
+    font-size: 2rem;
+    margin-bottom: 30px;
+    border-bottom: 3px solid #3498db;
+    padding-bottom: 10px;
+    width: fit-content;
+}
+
+.history-grid {
+    display: grid;
+    gap: 25px;
+}
+
+.history-item {
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 25px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+    border-left: 5px solid #3498db;
+    transition: transform 0.3s ease;
+}
+
+.history-item:hover {
+    transform: translateY(-5px);
+}
+
+.history-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #ecf0f1;
+}
+
+.history-details h3 {
+    color: #2c3e50;
+    font-size: 1.3rem;
+    margin-bottom: 5px;
+}
+
+.pnr-info {
+    color: #7f8c8d;
+    font-size: 0.9rem;
+}
+
+.status {
+    padding: 6px 15px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
+.status-confirmed {
+    background: #2ecc71;
+    color: white;
+}
+
+.status-cancelled {
+    background: #e74c3c;
+    color: white;
+}
+
+.status-pending {
+    background: #f1c40f;
+    color: #2c3e50;
+}
+
+.travel-info {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    gap: 20px;
+    padding: 20px 0;
+}
+
+.station {
+    text-align: center;
+}
+
+.station h4 {
+    color: #2c3e50;
+    font-size: 1.1rem;
+    margin-bottom: 8px;
+}
+
+.station p {
+    color: #3498db;
+    font-weight: 500;
+}
+
+.journey-details {
+    text-align: center;
+    position: relative;
+}
+
+.route-connector {
+    height: 3px;
+    background: #3498db;
+    margin: 15px 0;
+    position: relative;
+}
+
+.route-connector::before,
+.route-connector::after {
+    content: '';
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    background: #3498db;
+    border-radius: 50%;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.route-connector::before {
+    left: -20px;
+}
+
+.route-connector::after {
+    right: -20px;
+}
+
+.duration {
+    color: #7f8c8d;
+    font-size: 0.95rem;
+}
+
+.distance {
+    color: #7f8c8d;
+    font-size: 0.9rem;
+    margin-top: 5px;
+}
+
+.history-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 15px;
+    border-top: 1px solid #ecf0f1;
+}
+
+.price-details .price {
+    color: #e67e22;
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+.booking-date {
+    color: #7f8c8d;
+    font-size: 0.85rem;
+    margin-top: 5px;
+}
+
+.view-btn {
+    background: #3498db;
+    color: white;
+    padding: 10px 25px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: background 0.3s ease;
+}
+
+.view-btn:hover {
+    background: #2980b9;
+}
+
+.no-history {
+    background: white;
+    border-radius: 12px;
+    padding: 40px;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+    margin-top: 20px;
+}
+
+.no-history h3 {
+    color: #2c3e50;
+    margin-bottom: 15px;
+}
+
+.no-history p {
+    color: #7f8c8d;
+    margin-bottom: 20px;
+}
+
+.book-now-btn {
+    background: #3498db;
+    color: white;
+    padding: 12px 30px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: 500;
+    display: inline-block;
+    transition: background 0.3s ease;
+}
+
+.book-now-btn:hover {
+    background: #2980b9;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .travel-info {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .history-footer {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+    }
+
+    .history-title {
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .history-item {
+        padding: 15px;
+    }
+
+    .history-details h3 {
+        font-size: 1.1rem;
+    }
+
+    .view-btn {
+        width: 100%;
+        text-align: center;
+    }
+}
