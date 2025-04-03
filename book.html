@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Book Tickets - TicketXpress</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="css/book.css">
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="images/train-logo.png">
+</head>
+<body>
+  <!-- Sidebar Navigation -->
+  <aside class="sidebar">
+    <div class="sidebar-header">
+      <img src="images/train-logo.png" alt="TicketXpress Logo">
+      <h2>TicketXpress</h2>
+    </div>
+    
+    <ul class="sidebar-links">
+      <h4><span>Main Menu</span><div class="menu-separator"></div></h4>
+      <li><a href="index.html"><span class="material-symbols-outlined">home</span>Home</a></li>
+      <li><a href="book.html" class="active"><span class="material-symbols-outlined">confirmation_number</span>Book Tickets</a></li>
+      <li><a href="schedule.html"><span class="material-symbols-outlined">schedule</span>Train Schedule</a></li>
+
+      <h4><span>Services</span><div class="menu-separator"></div></h4>
+      <li><a href="history.html"><span class="material-symbols-outlined">event_note</span>My Bookings</a></li>
+      <li><a href="pnr-status.html"><span class="material-symbols-outlined">search</span>PNR Status</a></li>
+      <li><a href="routes.html"><span class="material-symbols-outlined">map</span>Train Routes</a></li>
+      <li><a href="Announcement.html"><span class="material-symbols-outlined">notifications_active</span>Notifications</a></li>
+      <li><a href="support.html"><span class="material-symbols-outlined">support_agent</span>Support</a></li>
+
+      <h4><span>Account</span><div class="menu-separator"></div></h4>
+      <li><a href="profile.html"><span class="material-symbols-outlined">account_circle</span>Profile</a></li>
+      <li><a href="login.html"><span class="material-symbols-outlined">logout</span>Logout</a></li>
+    </ul>
+    
+    <div class="user-account">
+      <div class="user-profile">
+        <img src="images/user.png" alt="User Profile">
+        <div class="user-detail">
+          <h3>Aniket Madavi</h3>
+          <span>User</span>
+        </div>
+      </div>
+    </div>
+  </aside>
+
+  <!-- Main Content -->
+  <main class="content">
+    <div class="booking-container">
+      <section class="search-section">
+        <h2 class="search-title">Search Trains</h2>
+        <form class="search-form" action="#">
+          <div class="form-group">
+            <label for="fromStation">From</label>
+            <select class="form-control" id="fromStation" required>
+              <option value="">Select Departure Station</option>
+              <option value="Mumbai Central">Mumbai Central</option>
+              <option value="New Delhi">New Delhi</option>
+              <option value="Secunderabad">Secunderabad</option>
+              <option value="Sainagar Shirdi">Sainagar Shirdi</option>
+              <option value="Solapur">Solapur</option>
+              <option value="Bhopal">Bhopal</option>
+              <option value="Lonavala">Lonavala</option>
+              <option value="Dharwad">Dharwad</option>
+              <option value="Bengaluru">Bengaluru</option>
+              <option value="Indore">Indore</option>
+              <option value="Goa">Goa</option>
+              <option value="Gandhinagar">Gandhinagar</option>
+              <option value="Himachal">Himachal</option>
+              <option value="Visakhapatnam">Visakhapatnam</option>
+              <option value="Ajmer">Ajmer</option>
+            </select>
+          </div>
+          
+          <div class="form-group">
+            <label for="toStation">To</label>
+            <select class="form-control" id="toStation" required>
+              <option value="">Select Arrival Station</option>
+              <option value="Mumbai Central">Mumbai Central</option>
+              <option value="New Delhi">New Delhi</option>
+              <option value="Secunderabad">Secunderabad</option>
+              <option value="Sainagar Shirdi">Sainagar Shirdi</option>
+              <option value="Solapur">Solapur</option>
+              <option value="Bhopal">Bhopal</option>
+              <option value="Lonavala">Lonavala</option>
+              <option value="Dharwad">Dharwad</option>
+              <option value="Bengaluru">Bengaluru</option>
+              <option value="Indore">Indore</option>
+              <option value="Goa">Goa</option>
+              <option value="Gandhinagar">Gandhinagar</option>
+              <option value="Himachal">Himachal</option>
+              <option value="Visakhapatnam">Visakhapatnam</option>
+              <option value="Ajmer">Ajmer</option>
+            </select>
+          </div>
+          
+          <div class="form-group">
+            <label for="travelDate">Date of Journey</label>
+            <input type="date" class="form-control" id="travelDate" required>
+          </div>
+          
+          <div class="form-group">
+            <label for="classType">Class</label>
+            <select class="form-control" id="classType">
+              <option value="All">All Classes</option>
+              <option value="Economy">Economy</option>
+              <option value="Business">Business</option>
+              <option value="First">First Class</option>
+            </select>
+          </div>
+          
+          <button type="submit" class="search-btn">Search Trains</button>
+        </form>
+      </section>
+      
+      <section class="results-section">
+        <h2 class="results-title">Available Trains</h2>
+        <div class="train-list">
+          <!-- Sample Train Card 1 -->
+          <div class="train-card">
+            <div class="train-header">
+              <div>
+                <div class="train-name">Mumbai Central-Gandhinagar Express</div>
+                <div class="train-number">Train No: TX001</div>
+              </div>
+              <div class="availability">Seats Available</div>
+            </div>
+            
+            <div class="train-details">
+              <div class="station-info">
+                <div class="station-name">Mumbai Central</div>
+                <div class="station-time">06:00</div>
+              </div>
+              
+              <div class="duration-info">
+                <div class="train-route">
+                  <div class="route-line"></div>
+                </div>
+                <div class="duration">5h 40m</div>
+                <div class="distance">548 km</div>
+              </div>
+              
+              <div class="station-info">
+                <div class="station-name">Gandhinagar</div>
+                <div class="station-time">11:40</div>
+              </div>
+            </div>
+            
+            <div class="train-footer">
+              <div>
+                <div class="price-info">₹1,200</div>
+                <div class="operating-days">6 days a week except Sundays</div>
+              </div>
+               <a href="confirm-train.html"> <button class="book-btn">Book Now</button></a>
+            </div>
+          </div>
+          
+          <!-- Sample Train Card 2 -->
+          <div class="train-card">
+            <div class="train-header">
+              <div>
+                <div class="train-name">New Delhi – Himachal Express</div>
+                <div class="train-number">Train No: TX002</div>
+              </div>
+              <div class="availability">Limited Seats</div>
+            </div>
+            
+            <div class="train-details">
+              <div class="station-info">
+                <div class="station-name">New Delhi</div>
+                <div class="station-time">07:30</div>
+              </div>
+              
+              <div class="duration-info">
+                <div class="train-route">
+                  <div class="route-line"></div>
+                </div>
+                <div class="duration">6h 10m</div>
+                <div class="distance">412 km</div>
+              </div>
+              
+              <div class="station-info">
+                <div class="station-name">Himachal</div>
+                <div class="station-time">13:40</div>
+              </div>
+            </div>
+            
+            <div class="train-footer">
+              <div>
+                <div class="price-info">₹1,050</div>
+                <div class="operating-days">6 days a week except Thursdays</div>
+              </div>
+              <button class="book-btn">Book Now</button>
+            </div>
+          </div>
+          
+          <!-- Sample Train Card 3 -->
+          <div class="train-card">
+            <div class="train-header">
+              <div>
+                <div class="train-name">Mumbai - Goa Express</div>
+                <div class="train-number">Train No: TX010</div>
+              </div>
+              <div class="availability">Seats Available</div>
+            </div>
+            
+            <div class="train-details">
+              <div class="station-info">
+                <div class="station-name">Mumbai</div>
+                <div class="station-time">15:45</div>
+              </div>
+              
+              <div class="duration-info">
+                <div class="train-route">
+                  <div class="route-line"></div>
+                </div>
+                <div class="duration">6h 0m</div>
+                <div class="distance">588 km</div>
+              </div>
+              
+              <div class="station-info">
+                <div class="station-name">Goa</div>
+                <div class="station-time">21:45</div>
+              </div>
+            </div>
+            
+            <div class="train-footer">
+              <div>
+                <div class="price-info">₹1,300</div>
+                <div class="operating-days">Daily</div>
+              </div>
+              <button class="book-btn">Book Now</button>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer-container">
+    <div class="footer-content">
+      <div class="footer-brand-container">
+        <div class="footer-brand-name-container">
+          <img class="brand-logo" src="images/train-logo.png" alt="TicketXpress Logo">
+          <h1 class="brand-name">TicketXpress</h1>
+        </div>
+        <p class="brand-description">
+          Your one-stop solution for hassle-free train ticket booking and travel information across India.
+        </p>
+      </div>
+
+      <div class="media">
+        <h3 class="footer-heading">Follow Us</h3>
+        <div class="media-icons-container">
+          <a href="https://www.facebook.com/aniket.madavi.94?mibextid=ZbWKwL" class="media-icon"><i class="fab fa-facebook-f"></i></a>
+          <a href="https://x.com/MadaviAniket?t=-SPAr2slgP3GGHRq0yK-aw&s=09" class="media-icon"><i class="fab fa-twitter"></i></a>
+          <a href="https://www.instagram.com/aniket_madavi1?igsh=OTd0enZmZzYzMWVj" class="media-icon"><i class="fab fa-instagram"></i></a>
+          <a href="https://www.linkedin.com/in/aniket-madavi-6832a5328?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" class="media-icon"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+      </div>
+
+      <div class="quick-links-container">
+        <h3 class="footer-heading">Quick Links</h3>
+        <a href="index.html">Home</a>
+        <a href="book.html">Book Tickets</a>
+        <a href="schedule.html">Train Schedule</a>
+        <a href="routes.html">Popular Routes</a>
+        <a href="support.html">Customer Support</a>
+      </div>
+
+      <div class="contact-container">
+        <h3 class="footer-heading">Contact Us</h3>
+        <a href="#"><i class="fas fa-map-marker-alt"></i> 123 Railway Nagar, Mumbai, India</a>
+        <a href="tel:+911234567890"><i class="fas fa-phone"></i> 8830707410</a>
+        <a href="mailto:support@ticketxpress.com"><i class="fas fa-envelope"></i> support@ticketxpress.com</a>
+      </div>
+    </div>
+
+    <div class="copyright">
+      © 2023 TicketXpress. All Rights Reserved.
+    </div>
+  </footer>
+</body>
+</html>
