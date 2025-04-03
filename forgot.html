@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forgot Password - TicketXpress</title>
+    <link rel="stylesheet" type="text/css" href="stylelogin.css">
+    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@500&display=swap" rel="stylesheet">
+    <link rel="icon" href="images/train-logo.png">
+</head>
+<body>
+    <div class="main">  	
+        <div class="forgot-password">
+            <form action="login.html" method="get">
+                <label>Forgot Password</label>
+                <p class="instruction-text">
+                    Enter your email address to receive a password reset link.
+                </p>
+                <input type="email" name="email" placeholder="Email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" title="Valid email required" required>
+                <button type="submit">Send Reset Link</button>
+                <a href="login.html" class="back-btn">Back to Login</a>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
