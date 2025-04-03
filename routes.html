@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Train Routes - TicketXpress</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/routes.css">
+    <link rel="icon" href="images/train-logo.png">
+</head>
+<body>
+    <!-- Sidebar from style.css -->
+    <aside class="sidebar">
+        <div class="sidebar-header">
+            <img src="images/train-logo.png" alt="TicketXpress Logo">
+            <h2>TicketXpress</h2>
+        </div>
+        
+        <ul class="sidebar-links">
+            <h4><span>Main Menu</span><div class="menu-separator"></div></h4>
+            <li><a href="index.html"><span class="material-symbols-outlined">home</span>Home</a></li>
+            <li><a href="book.html"><span class="material-symbols-outlined">confirmation_number</span>Book Tickets</a></li>
+            <li><a href="schedule.html"><span class="material-symbols-outlined">schedule</span>Train Schedule</a></li>
+
+            <h4><span>Services</span><div class="menu-separator"></div></h4>
+            <li><a href="history.html"><span class="material-symbols-outlined">event_note</span>My Bookings</a></li>
+            <li><a href="pnr-status.html"><span class="material-symbols-outlined">search</span>PNR Status</a></li>
+            <li><a href="routes.html" class="active"><span class="material-symbols-outlined">map</span>Train Routes</a></li>
+            <li><a href="Announcement.html"><span class="material-symbols-outlined">notifications_active</span>Notifications</a></li>
+            <li><a href="support.html"><span class="material-symbols-outlined">support_agent</span>Support</a></li>
+
+            <h4><span>Account</span><div class="menu-separator"></div></h4>
+            <li><a href="profile.html"><span class="material-symbols-outlined">account_circle</span>Profile</a></li>
+            <li><a href="login.html"><span class="material-symbols-outlined">logout</span>Logout</a></li>
+        </ul>
+        
+        <div class="user-account">
+            <div class="user-profile">
+                <img src="images/user.png" alt="User Profile">
+                <div class="user-detail">
+                    <h3>Aniket Madavi</h3>
+                    <span>User</span>
+                </div>
+            </div>
+        </div>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="content">
+        <section class="routes-section">
+            <h1 class="routes-title">TicketXpress Train Routes</h1>
+            
+            <div class="routes-container">
+                <!-- Introduction -->
+                <div class="routes-intro">
+                    <p>TicketXpress (TX) is proud to offer a wide network of train routes across India, connecting major cities with high-speed, comfortable, and reliable train services. Our trains are equipped with modern facilities, including meal-on-board services and entertainment options, ensuring a pleasant journey for all passengers.</p>
+                </div>
+
+                <!-- Routes Table -->
+                <div class="routes-table">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>No</th>
+                                <th>Route</th>
+                                <th>Stations</th>
+                                <th>Meal Options</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>Mumbai - Goa (TX010)</td>
+                                <td>
+                                    <table class="inner-table">
+                                        <thead>
+                                            <tr>
+                                                <th style="background-color: #3a3d8a;">Station</th>
+                                                <th style="background-color: #3a3d8a;">Distance</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr><td>Mumbai</td><td>0 km</td></tr>
+                                            <tr><td>Panvel</td><td>50 km</td></tr>
+                                            <tr><td>Ratnagiri</td><td>335 km</td></tr>
+                                            <tr><td>Goa</td><td>588 km</td></tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                                <td>Veg Meal, Non-Veg Meal, Snack Box</td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>Lonavala - Ajmer (TX007)</td>
+                                <td>
+                                    <table class="inner-table">
+                                        <thead>
+                                            <tr>
+                                                <th style="background-color: #3a3d8a;">Station</th>
+                                                <th style="background-color: #3a3d8a;">Distance</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr><td>Lonavala</td><td>0 km</td></tr>
+                                            <tr><td>Pune</td><td>64 km</td></tr>
+                                            <tr><td>Ahmedabad</td><td>625 km</td></tr>
+                                            <tr><td>Ajmer</td><td>900 km</td></tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                                <td>Veg Meal, Snack Box, No Meal</td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>Mumbai Central - Gandhinagar (TX001)</td>
+                                <td>
+                                    <table class="inner-table">
+                                        <thead>
+                                            <tr>
+                                                <th style="background-color: #3a3d8a;">Station</th>
+                                                <th style="background-color: #3a3d8a;">Distance</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr><td>Mumbai Central</td><td>0 km</td></tr>
+                                            <tr><td>Surat</td><td>263 km</td></tr>
+                                            <tr><td>Vadodara</td><td>392 km</td></tr>
+                                            <tr><td>Gandhinagar</td><td>548 km</td></tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                                <td>Veg Meal, Non-Veg Meal, Snack Box</td>
+                            </tr>
+                            <tr>
+                                <td>4</td>
+                                <td>New Delhi - Himachal (TX002)</td>
+                                <td>
+                                    <table class="inner-table">
+                                        <thead>
+                                            <tr>
+                                                <th style="background-color: #3a3d8a;">Station</th>
+                                                <th style="background-color: #3a3d8a;">Distance</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr><td>New Delhi</td><td>0 km</td></tr>
+                                            <tr><td>Ambala</td><td>199 km</td></tr>
+                                            <tr><td>Chandigarh</td><td>243 km</td></tr>
+                                            <tr><td>Himachal</td><td>412 km</td></tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                                <td>Veg Meal, Snack Box</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <!-- Additional Information -->
+                <div class="routes-info">
+                    <p>TicketXpress (TX) is committed to expanding our network to connect more cities across India, ensuring seamless travel experiences for our passengers. We are exploring new routes such as Chennai - Bengaluru and Delhi - Pune to cater to growing demand.</p>
+                    <p><strong>Sample Schedule (Mumbai - Goa, TX010):</strong></p>
+                    <ul>
+                        <li>From Mumbai, the train departs at 15:45 and reaches Panvel by 16:30.</li>
+                        <li>Departs Panvel at 16:35, reaches Ratnagiri by 19:00.</li>
+                        <li>Departs Ratnagiri at 19:05, arrives in Goa by 21:45.</li>
+                    </ul>
+                    <p>Our trains maintain detailed schedules, including intermediate station timings where applicable. Each coach has a seating capacity of 30 passengers, with one driver and a co-driver for routes longer than 100 km. TicketXpress trains operate throughout the year, strictly adhering to the published schedules.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer from style.css -->
+    <footer class="footer-container">
+        <div class="footer-content">
+          <div class="footer-brand-container">
+            <div class="footer-brand-name-container">
+              <img class="brand-logo" src="images/train-logo.png" alt="TicketXpress Logo">
+              <h1 class="brand-name">TicketXpress</h1>
+            </div>
+            <p class="brand-description">
+              Your one-stop solution for hassle-free train ticket booking and travel information across India.
+            </p>
+          </div>
+    
+          <div class="media">
+            <h3 class="footer-heading">Follow Us</h3>
+            <div class="media-icons-container">
+              <a href="https://www.facebook.com/aniket.madavi.94?mibextid=ZbWKwL" class="media-icon"><i class="fab fa-facebook-f"></i></a>
+              <a href="https://x.com/MadaviAniket?t=-SPAr2slgP3GGHRq0yK-aw&s=09" class="media-icon"><i class="fab fa-twitter"></i></a>
+              <a href="https://www.instagram.com/aniket_madavi1?igsh=OTd0enZmZzYzMWVj" class="media-icon"><i class="fab fa-instagram"></i></a>
+              <a href="https://www.linkedin.com/in/aniket-madavi-6832a5328?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" class="media-icon"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+          </div>
+    
+          <div class="quick-links-container">
+            <h3 class="footer-heading">Quick Links</h3>
+            <a href="index.html">Home</a>
+            <a href="book.html">Book Tickets</a>
+            <a href="schedule.html">Train Schedule</a>
+            <a href="routes.html">Popular Routes</a>
+            <a href="support.html">Customer Support</a>
+          </div>
+    
+          <div class="contact-container">
+            <h3 class="footer-heading">Contact Us</h3>
+            <a href="#"><i class="fas fa-map-marker-alt"></i> 123 Railway Nagar, Mumbai, India</a>
+            <a href="tel:+911234567890"><i class="fas fa-phone"></i> 8830707410</a>
+            <a href="mailto:support@ticketxpress.com"><i class="fas fa-envelope"></i> support@ticketxpress.com</a>
+          </div>
+        </div>
+    
+        <div class="copyright">
+          © 2023 TicketXpress. All Rights Reserved.
+        </div>
+    </footer>
+</body>
+</html>
