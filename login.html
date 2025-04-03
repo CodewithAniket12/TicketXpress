@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slide Navbar - Login</title>
+    <link rel="stylesheet" type="text/css" href="stylelogin.css">
+    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@500&display=swap" rel="stylesheet">
+    <link rel="icon" href="images/train-logo.png">
+</head>
+<body>
+    <div class="main">  	
+        <input type="checkbox" id="chk" aria-hidden="true">
+
+        <!-- Signup Form -->
+        <div class="signup">
+            <form action="index.html" method="get">
+                <label for="chk" aria-hidden="true">Sign up</label>
+                <input type="text" name="txt" placeholder="User name" pattern=".{3,}" title="Minimum 3 characters" required>
+                <input type="email" name="email" placeholder="Email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" title="Valid email required" required>
+                <input type="tel" name="phone" placeholder="9876543210" pattern="[0-9]{10}" maxlength="10" title="10 digit number" required>
+                <input type="password" name="pswd" placeholder="Password" minlength="6" title="Minimum 6 characters" required>
+                <button type="submit">Sign up</button>
+            </form>
+        </div>
+
+        <!-- Login Form -->
+        <div class="login">
+            <form action="index.html" method="get">
+                <label for="chk" aria-hidden="true">Login</label>
+                <input type="text" name="txt" placeholder="User name" pattern=".{3,}" title="Minimum 3 characters" required>
+                <input type="email" name="email" placeholder="Email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" title="Valid email required" required>
+                <input type="password" name="pswd" placeholder="Password" minlength="6" title="Minimum 6 characters" required>
+                <a href="forgot.html" class="forgot" align="center">forgot password?</a>
+                <button type="submit" class="loginbtn">Login</button>
+                <a href="./employee/employee-login.html" class="emp-btn">Employee</a>
+                <a href="admin-login.html" class="admin-btn">Login as Admin</a>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
