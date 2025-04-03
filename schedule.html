@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Train Schedule - TicketXpress</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/schedule.css">
+    <link rel="icon" href="images/train-logo.png">
+</head>
+<body>
+    <aside class="sidebar">
+        <div class="sidebar-header">
+            <img src="images/train-logo.png" alt="TicketXpress Logo">
+            <h2>TicketXpress</h2>
+        </div>
+        
+        <ul class="sidebar-links">
+            <h4><span>Main Menu</span><div class="menu-separator"></div></h4>
+            <li><a href="index.html"><span class="material-symbols-outlined">home</span>Home</a></li>
+            <li><a href="book.html"><span class="material-symbols-outlined">confirmation_number</span>Book Tickets</a></li>
+            <li><a href="schedule.html" class="active"><span class="material-symbols-outlined">schedule</span>Train Schedule</a></li>
+
+            <h4><span>Services</span><div class="menu-separator"></div></h4>
+            <li><a href="history.html"><span class="material-symbols-outlined">event_note</span>My Bookings</a></li>
+            <li><a href="pnr-status.html"><span class="material-symbols-outlined">search</span>PNR Status</a></li>
+            <li><a href="routes.html"><span class="material-symbols-outlined">map</span>Train Routes</a></li>
+            <li><a href="Announcement.html"><span class="material-symbols-outlined">notifications_active</span>Notifications</a></li>
+            <li><a href="support.html"><span class="material-symbols-outlined">support_agent</span>Support</a></li>
+
+            <h4><span>Account</span><div class="menu-separator"></div></h4>
+            <li><a href="profile.html"><span class="material-symbols-outlined">account_circle</span>Profile</a></li>
+            <li><a href="login.html"><span class="material-symbols-outlined">logout</span>Logout</a></li>
+        </ul>
+        
+        <div class="user-account">
+            <div class="user-profile">
+                <img src="images/user.png" alt="User Profile">
+                <div class="user-detail">
+                    <h3>Aniket Madavi</h3>
+                    <span>User</span>
+                </div>
+            </div>
+        </div>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="content">
+        <section class="schedule-section">
+            <h1 class="schedule-title">Train Schedule</h1>
+            
+            <div class="schedule-container">
+                <!-- Schedule Filter -->
+                <div class="schedule-filter">
+                    <div class="filter-group">
+                        <label for="from-station">From</label>
+                        <select id="from-station" class="filter-control">
+                            <option value="">Select Station</option>
+                            <option value="Mumbai">Mumbai</option>
+                            <option value="Mumbai Central">Mumbai Central</option>
+                            <option value="New Delhi">New Delhi</option>
+                            <option value="Lonavala">Lonavala</option>
+                            <option value="Panvel">Panvel</option>
+                            <option value="Ratnagiri">Ratnagiri</option>
+                            <option value="Goa">Goa</option>
+                            <option value="Surat">Surat</option>
+                            <option value="Vadodara">Vadodara</option>
+                            <option value="Gandhinagar">Gandhinagar</option>
+                            <option value="Ambala">Ambala</option>
+                            <option value="Chandigarh">Chandigarh</option>
+                            <option value="Himachal">Himachal</option>
+                            <option value="Pune">Pune</option>
+                            <option value="Ahmedabad">Ahmedabad</option>
+                            <option value="Ajmer">Ajmer</option>
+                        </select>
+                    </div>
+                    <div class="filter-group">
+                        <label for="to-station">To</label>
+                        <select id="to-station" class="filter-control">
+                            <option value="">Select Station</option>
+                            <option value="Mumbai">Mumbai</option>
+                            <option value="Mumbai Central">Mumbai Central</option>
+                            <option value="New Delhi">New Delhi</option>
+                            <option value="Lonavala">Lonavala</option>
+                            <option value="Panvel">Panvel</option>
+                            <option value="Ratnagiri">Ratnagiri</option>
+                            <option value="Goa">Goa</option>
+                            <option value="Surat">Surat</option>
+                            <option value="Vadodara">Vadodara</option>
+                            <option value="Gandhinagar">Gandhinagar</option>
+                            <option value="Ambala">Ambala</option>
+                            <option value="Chandigarh">Chandigarh</option>
+                            <option value="Himachal">Himachal</option>
+                            <option value="Pune">Pune</option>
+                            <option value="Ahmedabad">Ahmedabad</option>
+                            <option value="Ajmer">Ajmer</option>
+                        </select>
+                    </div>
+                    <div class="filter-group">
+                        <label for="date">Date</label>
+                        <input type="date" id="date" class="filter-control">
+                    </div>
+                    <button class="filter-btn">Filter Schedule</button>
+                </div>
+
+                <!-- Schedule Table -->
+                <div class="schedule-table">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Train Name</th>
+                                <th>Train No</th>
+                                <th>Station Schedule</th>
+                                <th>Operating Days</th>
+                                <th>Status</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Mumbai Central - Gandhinagar Express</td>
+                                <td>TX001</td>
+                                <td>
+                                    <table class="inner-table">
+                                        <thead>
+                                            <tr>
+                                                <th style="background-color: #3a3d8a;">Station</th>
+                                                <th style="background-color: #3a3d8a;">Arrival</th>
+                                                <th style="background-color: #3a3d8a;">Departure</th>
+                                                <th style="background-color: #3a3d8a;">Distance</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr><td>Mumbai Central</td><td>-</td><td>06:00</td><td>0 km</td></tr>
+                                            <tr><td>Surat</td><td>08:00</td><td>08:10</td><td>263 km</td></tr>
+                                            <tr><td>Vadodara</td><td>09:30</td><td>09:40</td><td>392 km</td></tr>
+                                            <tr><td>Gandhinagar</td><td>11:40</td><td>-</td><td>548 km</td></tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                                <td>Mon, Tue, Wed, Fri, Sat</td>
+                                <td class="status on-time">On Time</td>
+                            </tr>
+                            <tr>
+                                <td>New Delhi - Himachal Express</td>
+                                <td>TX002</td>
+                                <td>
+                                    <table class="inner-table">
+                                        <thead>
+                                            <tr>
+                                                <th style="background-color: #3a3d8a;">Station</th>
+                                                <th style="background-color: #3a3d8a;">Arrival</th>
+                                                <th style="background-color: #3a3d8a;">Departure</th>
+                                                <th style="background-color: #3a3d8a;">Distance</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr><td>New Delhi</td><td>-</td><td>07:30</td><td>0 km</td></tr>
+                                            <tr><td>Ambala</td><td>09:45</td><td>09:50</td><td>199 km</td></tr>
+                                            <tr><td>Chandigarh</td><td>10:30</td><td>10:35</td><td>243 km</td></tr>
+                                            <tr><td>Himachal</td><td>13:40</td><td>-</td><td>412 km</td></tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                                <td>Mon, Tue, Wed, Fri, Sat, Sun</td>
+                                <td class="status delayed">Delayed (30m)</td>
+                            </tr>
+                            <tr>
+                                <td>Mumbai - Goa Express</td>
+                                <td>TX010</td>
+                                <td>
+                                    <table class="inner-table">
+                                        <thead>
+                                            <tr>
+                                                <th style="background-color: #3a3d8a;">Station</th>
+                                                <th style="background-color: #3a3d8a;">Arrival</th>
+                                                <th style="background-color: #3a3d8a;">Departure</th>
+                                                <th style="background-color: #3a3d8a;">Distance</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr><td>Mumbai</td><td>-</td><td>15:45</td><td>0 km</td></tr>
+                                            <tr><td>Panvel</td><td>16:30</td><td>16:35</td><td>50 km</td></tr>
+                                            <tr><td>Ratnagiri</td><td>19:00</td><td>19:05</td><td>335 km</td></tr>
+                                            <tr><td>Goa</td><td>21:45</td><td>-</td><td>588 km</td></tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                                <td>Daily</td>
+                                <td class="status on-time">On Time</td>
+                            </tr>
+                            <tr>
+                                <td>Lonavala - Ajmer Express</td>
+                                <td>TX020</td>
+                                <td>
+                                    <table class="inner-table">
+                                        <thead>
+                                            <tr>
+                                                <th style="background-color: #3a3d8a;">Station</th>
+                                                <th style="background-color: #3a3d8a;">Arrival</th>
+                                                <th style="background-color: #3a3d8a;">Departure</th>
+                                                <th style="background-color: #3a3d8a;">Distance</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr><td>Lonavala</td><td>-</td><td>10:00</td><td>0 km</td></tr>
+                                            <tr><td>Pune</td><td>10:45</td><td>10:50</td><td>64 km</td></tr>
+                                            <tr><td>Ahmedabad</td><td>20:00</td><td>20:10</td><td>625 km</td></tr>
+                                            <tr><td>Ajmer</td><td>23:30</td><td>-</td><td>900 km</td></tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                                <td>Mon, Wed, Fri</td>
+                                <td class="status on-time">On Time</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <!-- No Results Message -->
+                <div class="no-schedule" style="display: none;">
+                    <h3>No Trains Available</h3>
+                    <p>Please adjust your filters or try a different route.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer from style.css -->
+    <footer class="footer-container">
+        <div class="footer-content">
+          <div class="footer-brand-container">
+            <div class="footer-brand-name-container">
+              <img class="brand-logo" src="images/train-logo.png" alt="TicketXpress Logo">
+              <h1 class="brand-name">TicketXpress</h1>
+            </div>
+            <p class="brand-description">
+              Your one-stop solution for hassle-free train ticket booking and travel information across India.
+            </p>
+          </div>
+    
+          <div class="media">
+            <h3 class="footer-heading">Follow Us</h3>
+            <div class="media-icons-container">
+              <a href="https://www.facebook.com/aniket.madavi.94?mibextid=ZbWKwL" class="media-icon"><i class="fab fa-facebook-f"></i></a>
+              <a href="https://x.com/MadaviAniket?t=-SPAr2slgP3GGHRq0yK-aw&s=09" class="media-icon"><i class="fab fa-twitter"></i></a>
+              <a href="https://www.instagram.com/aniket_madavi1?igsh=OTd0enZmZzYzMWVj" class="media-icon"><i class="fab fa-instagram"></i></a>
+              <a href="https://www.linkedin.com/in/aniket-madavi-6832a5328?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" class="media-icon"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+          </div>
+    
+          <div class="quick-links-container">
+            <h3 class="footer-heading">Quick Links</h3>
+            <a href="index.html">Home</a>
+            <a href="book.html">Book Tickets</a>
+            <a href="schedule.html">Train Schedule</a>
+            <a href="routes.html">Popular Routes</a>
+            <a href="support.html">Customer Support</a>
+          </div>
+    
+          <div class="contact-container">
+            <h3 class="footer-heading">Contact Us</h3>
+            <a href="#"><i class="fas fa-map-marker-alt"></i> 123 Railway Nagar, Mumbai, India</a>
+            <a href="tel:+911234567890"><i class="fas fa-phone"></i> 8830707410</a>
+            <a href="mailto:support@ticketxpress.com"><i class="fas fa-envelope"></i> support@ticketxpress.com</a>
+          </div>
+        </div>
+    
+        <div class="copyright">
+          © 2023 TicketXpress. All Rights Reserved.
+        </div>
+    </footer>
+</body>
+</html>
