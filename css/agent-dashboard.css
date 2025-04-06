@@ -1,0 +1,118 @@
+/* agent-dashboard.css */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #f4f4f4;
+  }
+  
+  .required::after {
+    content: " *";
+    color: red;
+  }
+  
+  .dashboard-header {
+    background: #4f52ba;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    position: relative;
+  }
+  
+  .dashboard-header h1 {
+    font-size: 1.8rem;
+    margin: 0;
+  }
+  
+  .logout-btn {
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+  }
+  
+  .logout-btn .material-symbols-outlined {
+    margin-right: 5px;
+  }
+  
+  .dashboard-main {
+    max-width: 1000px;
+    margin: 30px auto;
+    padding: 0 20px;
+  }
+  
+  .agent-info, .train-bookings, .commission-summary {
+    background: white;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  }
+  
+  .agent-info h2, .train-bookings h2, .commission-summary h2 {
+    color: #4f52ba;
+    margin-bottom: 20px;
+    font-size: 1.3rem;
+  }
+  
+  .agent-info p, .commission-details p {
+    margin: 5px 0;
+    font-size: 1rem;
+  }
+  
+  .train-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+  }
+  
+  .train-table th, .train-table td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: left;
+  }
+  
+  .train-table th {
+    background: #4f52ba;
+    color: white;
+  }
+  
+  .book-btn {
+    background: #4f52ba;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+  
+  .book-btn:hover {
+    background: #3a3d8a;
+  }
+  
+  .commission-details {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+  }
+  
+  @media (max-width: 768px) {
+    .dashboard-main {
+      padding: 0 10px;
+    }
+    .train-table, .commission-details {
+      font-size: 0.9rem;
+    }
+    .commission-details {
+      flex-direction: column;
+    }
+    .train-table th, .train-table td {
+      padding: 8px;
+    }
+  }

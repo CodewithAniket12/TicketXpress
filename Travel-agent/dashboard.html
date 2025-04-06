@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Travel Agent Dashboard - TicketXpress</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200">
+  <link rel="stylesheet" href="../css/agent-dashboard.css">
+  <link rel="icon" href="../images/train-logo.png">
+</head>
+<body>
+  <header class="dashboard-header">
+    <h1>Travel Agent Dashboard</h1>
+    <a href="login.html" class="logout-btn">
+      <span class="material-symbols-outlined">logout</span> Logout
+    </a>
+  </header>
+
+  <main class="dashboard-main">
+    <!-- Agent Info Section -->
+    <section class="agent-info">
+      <h2>Welcome, Aniket</h2>
+      <p><strong>Agent ID:</strong> AGT12345</p>
+      <p><strong>Commission Rate:</strong> 20% per ticket</p>
+      <p><strong>Wallet Balance:</strong> ₹15,000</p>
+    </section>
+
+    <!-- Train Bookings Section -->
+    <section class="train-bookings">
+      <h2>Train Bookings (Next 30 Days)</h2>
+      <p>View and book trains for the next 30 days.</p>
+      <table class="train-table">
+        <thead>
+          <tr>
+            <th>Train Name</th>
+            <th>From</th>
+            <th>To</th>
+            <th>Date</th>
+            <th>Fare</th>
+            <th>Commission</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Mumbai-Gandhinagar Express</td>
+            <td>Mumbai Central</td>
+            <td>Gandhinagar</td>
+            <td>07 Apr 2025</td>
+            <td>₹1,200</td>
+            <td>₹240</td>
+            <td><a href="../confirm-train.html"><button class="book-btn">Book</button></a></td>
+          </tr>
+          <tr>
+            <td>Gandhinagar-Mumbai Superfast</td>
+            <td>Gandhinagar</td>
+            <td>Mumbai Central</td>
+            <td>10 Apr 2025</td>
+            <td>₹1,300</td>
+            <td>₹260</td>
+            <td><a href="confirm-train.html"><button class="book-btn">Book</button></a></td>
+          </tr>
+          <tr>
+            <td>Mumbai-Gandhinagar Express</td>
+            <td>Mumbai Central</td>
+            <td>Gandhinagar</td>
+            <td>20 Apr 2025</td>
+            <td>₹1,200</td>
+            <td>₹240</td>
+            <td><a href="confirm-train.html"><button class="book-btn">Book</button></a></td>
+          </tr>
+          <!-- Add more rows for 30 days manually or dynamically later -->
+        </tbody>
+      </table>
+    </section>
+
+    <!-- Commission Summary Section -->
+    <section class="commission-summary">
+      <h2>Commission Summary</h2>
+      <div class="commission-details">
+        <p><strong>Total Tickets Booked:</strong> 50</p>
+        <p><strong>Total Fare Collected:</strong> ₹60,000</p>
+        <p><strong>Your Commission (20%):</strong> ₹12,000</p>
+      </div>
+    </section>
+  </main>
+</body>
+</html>
