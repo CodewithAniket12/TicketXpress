@@ -10,6 +10,13 @@
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="css/confirm.css">
   <link rel="icon" href="images/train-logo.png">
+  <!-- Inline CSS for red star -->
+  <style>
+    .required::after {
+      content: " *";
+      color: red;
+    }
+  </style>
 </head>
 <body>
   <header class="booking-header">
@@ -66,18 +73,18 @@
         <div class="passenger-entry">
           <h3>Passenger 1</h3>
           <div class="form-group">
-            <label for="passengerName1">Full Name</label>
+            <label for="passengerName1" class="required">Full Name</label>
             <input type="text" id="passengerName1" name="passengerName1" class="form-control" required>
           </div>
           
           <div class="form-row">
             <div class="form-group">
-              <label for="passengerAge1">Age</label>
+              <label for="passengerAge1" class="required">Age</label>
               <input type="number" id="passengerAge1" name="passengerAge1" class="form-control" min="1" max="100" required>
             </div>
             
             <div class="form-group">
-              <label for="passengerGender1">Gender</label>
+              <label for="passengerGender1" class="required">Gender</label>
               <select id="passengerGender1" name="passengerGender1" class="form-control" required>
                 <option value="">Select</option>
                 <option value="Male">Male</option>
@@ -101,18 +108,18 @@
         <div class="passenger-entry">
           <h3>Passenger 2</h3>
           <div class="form-group">
-            <label for="passengerName2">Full Name</label>
+            <label for="passengerName2" class="required">Full Name</label>
             <input type="text" id="passengerName2" name="passengerName2" class="form-control" required>
           </div>
           
           <div class="form-row">
             <div class="form-group">
-              <label for="passengerAge2">Age</label>
+              <label for="passengerAge2" class="required">Age</label>
               <input type="number" id="passengerAge2" name="passengerAge2" class="form-control" min="1" max="100" required>
             </div>
             
             <div class="form-group">
-              <label for="passengerGender2">Gender</label>
+              <label for="passengerGender2" class="required">Gender</label>
               <select id="passengerGender2" name="passengerGender2" class="form-control" required>
                 <option value="">Select</option>
                 <option value="Male">Male</option>
@@ -124,7 +131,7 @@
           
           <div class="form-group">
             <label for="passengerCategory2">Category</label>
-            <select id="passengerCategory2" name="passengerCategory2" class="form-control" required>
+            <select id="passEDGEengerCategory2" name="passengerCategory2" class="form-control" required>
               <option value="adult">Adult</option>
               <option value="senior">Senior Citizen (15% Discount)</option>
               <option value="child">Child (15% Discount)</option>
@@ -133,18 +140,20 @@
         </div>
 
         <div class="form-group">
-          <label for="passengerEmail">Email</label>
+          <label for="passengerEmail" class="required">Email</label>
           <input type="email" id="passengerEmail" name="passengerEmail" class="form-control" required>
         </div>
         
         <div class="form-group">
-          <label for="passengerPhone">Phone Number</label>
-          <input type="tel" id="passengerPhone" name="passengerPhone" class="form-control" required>
+          <label for="passengerPhone" class="required">Phone Number</label>
+          <input type="tel" id="passengerPhone" name="passengerPhone" class="form-control" pattern="[0-9]{10}" placeholder="Enter 10-digit number" required>
+          <span class="form-note">Enter a valid 10-digit Indian phone number</span>
         </div>
 
         <!-- KYC Verification Section -->
-        <div id="kycVerification">
-          <h3>KYC Verification (Required for Senior/Child)</h3>
+        <div idphysics: id="kycVerification">
+          <h3>KYC Verification (Required for Senior/Child Discounts)</h3>
+          <p class="form-note">Please provide KYC details if selecting Senior Citizen or Child category.</p>
           <div class="form-group">
             <label for="kycType">KYC Document Type</label>
             <select id="kycType" name="kycType" class="form-control">
